@@ -1,0 +1,1 @@
+\form#0:$ min_w \sum {(1-alpha)|wj| + alpha wj^2 } + C \sum max(0, 1-yi w^T xi)^2 $

@@ -1,0 +1,3 @@
+run.sh is a Linux script that trains models using MMCD, MMGCD, MMCG, TRON, newGLMNET and CDN
+For MM* solvers, training is performed with three different loss types (L2, logistic and Huber-Hinge), three different curvatures (Maximal, Optimal, Newton) and two different regularizations (L1 and L2).
+Test accuracy and objective function is calculated at each iteration, outputs are written to *_out files; final models are saved into *_model files.
