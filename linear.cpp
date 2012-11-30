@@ -5,10 +5,10 @@
 #include <stdarg.h>
 #include <locale.h>
 #include "linear.h"
+#include <time.h>
 #include "tron.h"
 #include <vector>
 #include "qmmchat.h"
-#include <time.h>
 
 static void solve_mmcd_sm(problem *prob_col, const parameter *param , double *w, double C, int *start, int *count, int nr_class);
 static void solve_mmcd_simple(problem *prob_col, double *w, double eps, double Cp, double Cn, const parameter *param, const struct model* model_, clock_t cpu_begin);
