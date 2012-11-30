@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <cstring>
 
+/**
+This function is called during the file read when the problem
+is first loaded.
+
+If param->S is set to enforce a (anti)symmetric weight set, these
+are used to modify data matrix on the fly.
+*/
+
 #ifdef __cplusplus
 extern "C" {
 #endif
