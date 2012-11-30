@@ -5,5 +5,5 @@ Please see
 - README_qmmlib for details,
 - matlab directory for MATLAB MEX wrappers,
 - examples directory for sample experiment datasets and scripts,
-- doc directory for documentation by doxygen.
-- windows directory for compiled Windows & MATLAB (for Windows) libraries.
+- doc directory for documentation by doxygen,
+- windows directory for compiled Windows & MATLAB (for Windows) binaries.
