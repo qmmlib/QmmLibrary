@@ -11,7 +11,7 @@ TARGET = windows
 all: $(TARGET)\train.exe $(TARGET)\predict.exe
 
 $(TARGET)\train.exe: tron.obj linear.obj train.c blas\*.c
-	$(CXX) $(CFLAGS) -Fe$(TARGET)\train.exe tron.obj linear.obj train.c do_predict_iter.cpp transform_line.cpp blas\*.c
+	$(CXX) $(CFLAGS) -Fe$(TARGET)\train.exe tron.obj linear.obj /Tptrain.c do_predict_iter.cpp transform_line.cpp blas\*.c
 
 $(TARGET)\predict.exe: tron.obj linear.obj predict.c blas\*.c
 	$(CXX) $(CFLAGS) -Fe$(TARGET)\predict.exe tron.obj linear.obj predict.c do_predict_iter.cpp transform_line.cpp blas\*.c
