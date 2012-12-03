@@ -42,23 +42,23 @@ If chat_level > 3, a test_file should be passed so test accuracy can be calculat
 
 #define __QMMCHAT__																																			\
 if (param->chat_level > 0) {																																			\
-	printf("Iter\t%d\tCPU_time\t%.10f\t", iter, cpu_time_elapsed);																									\
+	info("Iter\t%d\tCPU_time\t%.10f\t", iter, cpu_time_elapsed);																									\
 	if (param->chat_level > 1) {																																		\
-        /* printf("|w|_inf\t%.4f\t|diff_w|_inf\t%.4f\t",wmax_new,Dmax_new); */                                                                                         	\
+        /* info("|w|_inf\t%.4f\t|diff_w|_inf\t%.4f\t",wmax_new,Dmax_new); */                                                                                         	\
 		if (param->chat_level > 2) {																																	\
-			printf("Objective_value\t%lf\t", objective_value);																										\
+			info("Objective_value\t%lf\t", objective_value);																										\
 			if (param->chat_level > 3) {																																\
 				if(param->test_file==0)																																\
 				{																																						\
 					fprintf(stderr,"\nERROR: Please provide a test file name if chat_level>=4\n");																\
 					exit(1);																																			\
 				}																																						\
-				printf("Train_acc\t%.2f\t",do_predict_iter(param->train_file,model_));																				\
-				printf("Test_acc\t%.2f\t",do_predict_iter(param->test_file,model_));																					\
+				info("Train_acc\t%.2f\t",do_predict_iter(param->train_file,model_));																				\
+				info("Test_acc\t%.2f\t",do_predict_iter(param->test_file,model_));																					\
 			}																																							\
 		}																																								\
 	}																																									\
-	printf("\n");																																						\
+	info("\n");																																						\
 }																																										\
 
 #endif 
