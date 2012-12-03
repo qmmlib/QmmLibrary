@@ -334,6 +334,20 @@ int parse_command_line(int nrhs, const mxArray *prhs[], char *model_file_name)
 
 	set_print_string_function(print_func);
 
+	if(param.chat_level>3)
+	{
+		if(i>=argc)
+		{
+			mexPrintf("please pass the train file at the end of options (like command line) if chat_level>=4\n");
+			return 1;
+		}
+		else
+		{
+			param.train_file = Malloc(char,1024);
+			strcpy(param.train_file, argv[i]);
+		}
+	}
+	
 	if(param.eps == INF)
 	{
 		switch(param.solver_type)
